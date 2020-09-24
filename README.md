@@ -12,3 +12,6 @@ Results then are again rendered in the HTML Table:
 ![Img](Facts.png)
 
 
+## Execution flow
+
+![Img](nornir_flask_flow.png)
