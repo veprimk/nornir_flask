@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NetApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="/">NetApp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container" style="margin-top:30px">
+<div class="jumbotron">
+  <h1>{{device_name}} Facts</h1>
+  <p>Retrieved by Nornir using Napalm.</p>
+</div>
+  <div class="row">
+  <h1> Main Info</h1>
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Vendor</th>
+        <th>OS Version</th>
+        <th>Serial Number</th>
+        <th>Hostname</th>
+        <th>FQDN</th>
+        <th>Uptime</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ facts.facts.vendor }}</td>
+        <td>{{ facts.facts.os_version }}</td>
+        <td>{{ facts.facts.serial_number }}</td>
+        <td>{{ facts.facts.hostname }}</td>
+        <td>{{ facts.facts.fqdn }}</td>
+        <td>{{ facts.facts.uptime }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+    <div class="row">
+    <h1> Interface List </h1>
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Interface Name</th>
+        <th>Enabled</th>
+        <th>Up</th>
+        <th>Description</th>
+        <th>MAC</th>
+        <th>MTU</th>
+        <th>Speed</th>
+        <th>Last Flapped</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for interface in interface_list %}
+      <tr>
+        <td>{{ interface.name }}</td>
+        <td>{{ interface.enabled }}</td>
+        <td>{{ interface.up }}</td>
+        <td>{{ interface.description }}</td>
+        <td>{{ interface.mac }}</td>
+        <td>{{ interface.mtu }}</td>
+        <td>{{ interface.speed }}</td>
+        <td>{{ interface.last_flapped }}</td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  </div>
+  
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+---
+cisco_ios:
+  connection_options:
+    napalm:
+      platform: ios
