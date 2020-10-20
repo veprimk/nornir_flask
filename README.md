@@ -17,10 +17,15 @@ The code allows for further customization as well as add more features. Knowledg
 Clone the repository into your Workstation:
 ```
 
+
 git clone https://github.com/veprimk/nornir_flask.git
 
 cd nornir_flask/
+```
 
+### Linux/Mac Users
+
+```
 python3.8 -m venv venv
 
 source venv/bin/activate
@@ -31,6 +36,12 @@ chmod 777 start_app.sh
 
 ./start_app.sh
 
+```
+
+### Windows Users
+```
+Execute:
+setup.bat
 ```
 
 
@@ -52,6 +63,8 @@ Results then are again rendered in the HTML Table:
 
 Create or edit a Nornir Inventory based on the given example in *hosts.yaml* and *groups.yaml* files and then simply start the application.
 
+### DevNet Sandbox
+The hosts.yaml file contains the details to IOS XE on CSR1000V Always-On which is available from DevNet Sandbox and that can be used to test the application.
 
 ## Known issues
 If you have questions, concerns, bug reports, etc., please create an issue against this [GitHub Repo](https://github.com/veprimk/nornir_flask/issues) and please make sure to include your code and the error log/traceback.
