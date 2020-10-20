@@ -39,10 +39,22 @@ chmod 777 start_app.sh
 ```
 
 ### Windows Users
+
+Create environment:
 ```
-Execute:
-setup.bat
+create_environment.bat
 ```
+
+Install dependencies
+```
+pip install -r requirements.txt
+```
+
+Start APP
+```
+start_app.bat
+```
+
 
 
 ## Usage

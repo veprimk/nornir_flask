@@ -1,4 +1,3 @@
-pip install -r requirements.txt
 
 set FLASK_APP=netapp.py
 
