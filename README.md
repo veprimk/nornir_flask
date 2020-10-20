@@ -1,6 +1,8 @@
 # nornir_flask (Simple NetApp)
 
 
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/veprimk/nornir_flask)
+
 This simple Web App will read your Nornirs hosts.yaml inventory file and will render the results in  a user friendly HTML Table.
 
 ## Use Case Description
