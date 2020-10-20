@@ -54,7 +54,7 @@ Create or edit a Nornir Inventory based on the given example in *hosts.yaml* and
 
 
 ## Known issues
-If you have questions, concerns, bug reports, etc., please create an issue against this [GitHub Repo](https://github.com/veprimk/nornir_flask.git/issues) and please make sure to include your code and the error log/traceback.
+If you have questions, concerns, bug reports, etc., please create an issue against this [GitHub Repo](https://github.com/veprimk/nornir_flask/issues) and please make sure to include your code and the error log/traceback.
 
 
 ## TODO
